@@ -49,9 +49,25 @@ public class MainPageDefinitions extends AbstractStepDefinitions {
         mainPage.getLoginToAccountButton().click();
     }
 
-    @Then("I check that error message on the page: ([^\"]*)")
+    @When("Try to login to account with empty credentials")
+    public void pressLoginButton() {
+        mainPage.getLoginButton().click();
+        mainPage.getLoginToAccountButton().click();
+    }
+
+    @Then("I check that login error message on the page: ([^\"]*)")
     public void checkErrorMessageOnPage(String errorText) {
         assertEquals("Expected and actual error mesages not the same", errorText, mainPage.getLoginErrorMessage().getText());
+    }
+
+    @Then("I check that only login error message on the page: ([^\"]*)")
+    public void checkOnlyLoginErrorMessageOnPage(String errorText) {
+        assertEquals("Expected and actual error mesages not the same", errorText, mainPage.getOnlyLoginErrorMessage().getText());
+    }
+
+    @Then("I check that password error message on the page: ([^\"]*)")
+    public void checkPasswordErrorMessageOnPage(String errorText) {
+        assertEquals("Expected and actual error mesages not the same", errorText, mainPage.getPasswordErrorMessage().getText());
     }
 
 

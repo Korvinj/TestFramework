@@ -16,7 +16,9 @@ public class MainPage extends AbstractPage {
     private static final String LOGIN_EMAIL = "(//input[@name='email'])[3]";
     private static final String LOGIN_PASSWORD = "(//input[@name='password'])[2]";
     private static final String LOGIN_TO_ACCOUNT_BUTTON = "//button[text()='Anmelden ']";
-    private static final String LOGIN_ERROR_MESSAGE = "(//div[@class='Input__error-message']/span)[2]";
+    private static final String ONLY_LOGIN_ERROR_MESSAGE = "(//div[@class='Input__error-message']/span)[2]";
+    private static final String LOGIN_ERROR_MESSAGE = "(//div[@class='Input__error-message']/span)[3]";
+    private static final String PASSWORD_ERROR_MESSAGE = "(//div[@class='Input__error-message']/span)[4]";
 
     public WebElement getLoanType() {
         return waitUntilElementAppear(By.xpath(LOAN_TYPE));
@@ -52,5 +54,13 @@ public class MainPage extends AbstractPage {
 
     public WebElement getLoginErrorMessage() {
         return driver.findElement(By.xpath(LOGIN_ERROR_MESSAGE));
+    }
+
+    public WebElement getPasswordErrorMessage() {
+        return driver.findElement(By.xpath(PASSWORD_ERROR_MESSAGE));
+    }
+
+    public WebElement getOnlyLoginErrorMessage() {
+        return driver.findElement(By.xpath(ONLY_LOGIN_ERROR_MESSAGE));
     }
 }
