@@ -13,5 +13,6 @@ public class PersonalProfileDefinitions extends AbstractStepDefinitions {
 	@When("I want to go to tour booking page")
 	public void goToTourBookingPage() {
 		personalProfilePage.getToursButton().click();
+		personalProfilePage.waitForPageLoaded();
 	}
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ToursBookingPage extends AbstractPage {
 	private static final String SEARCH_CITY_BUTTON = "//div[@id='s2id_autogen10']";
-	private static final String SEARCH_CITY_FIELD = "//div[@id='select2-drop']//input[@class='select2-input']";
+	private static final String SEARCH_CITY_FIELD = "//div[@id='select2-drop']//input";
 	private static final String AMOUNT_GUESTS_SELECT = "//select[@id='adults']";
 	private static final String TOUR_TYPE_SELECT = "//select[@id='tourtype']";
 	private static final String TOUR_TYPE_SELECT_BUTTON = "//div[@id='s2id_tourtype']";

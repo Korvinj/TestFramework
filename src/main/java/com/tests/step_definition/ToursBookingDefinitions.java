@@ -6,11 +6,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ToursBookingDefinitions extends AbstractStepDefinitions {
+
 	@Autowired
 	ToursBookingPage toursBookingPage;
 
 	@When("I search for tour type: ([^\"]*) to city: ([^\"]*)")
 	public void searchForTourByTypeAndCity(String type, String city){
+		toursBookingPage.getSearchCityButton().click();
 		toursBookingPage.getSearchCityField().sendKeys(city);
 		toursBookingPage.getSearchLinkByTypeAndCity(type, city).click();
 	}
@@ -29,5 +31,6 @@ public class ToursBookingDefinitions extends AbstractStepDefinitions {
 	@When("I search for the tours")
 	public void clickSearchButton() {
 		toursBookingPage.getSearchTourButton().click();
+		toursBookingPage.waitForPageLoaded();
 	}
 }
