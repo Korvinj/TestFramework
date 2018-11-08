@@ -4,10 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>testKorvin</groupId>
-    <artifactId>testKorvin</artifactId>
+    <groupId>testPhpTravels</groupId>
+    <artifactId>testPhpTravels</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>test framework</description>
 
     <properties>
         <junit.version>4.12</junit.version>
@@ -80,6 +79,4 @@
         </plugins>
 
     </build>
-
-
 </project>

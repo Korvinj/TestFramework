@@ -1,4 +1,4 @@
-package com.tests.test_runner;
+package test_runner;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber-html-report"},
         glue = {"com.tests.step_definition", "com.tests.framework"}
 )
-public class RunCukesTests {
+public class RunCukesTest {
     @AfterClass
     public static void tearDown() {
         WebDriverDiscovery.getDriver().quit();

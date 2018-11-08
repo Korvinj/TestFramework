@@ -1,7 +1,6 @@
 package com.tests.page_objects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,11 +13,8 @@ public abstract class AbstractPage {
     protected WebDriver driver;
 
     public void getPage() {
-        driver.get("https://www.smava.de/");
-    }
-
-    public WebElement getSelectByText(String text) {
-            return driver.findElement(By.xpath("//div[contains(@aria-label,'" + text + "')]"));
+        driver.get("https://www.phptravels.net/");
+        driver.manage().window().maximize();
     }
 
     public WebElement waitUntilElementAppear(By selector) {

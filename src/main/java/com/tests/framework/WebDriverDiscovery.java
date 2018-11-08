@@ -9,7 +9,7 @@ public class WebDriverDiscovery {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            String path = "src/main/resources/webdriver/chromedriver";
+            String path = "C:\\wbd\\chromedriver.exe";
             System.setProperty("webdriver.chrome.driver", path);
             return driver = new ChromeDriver();
         } else return driver;
