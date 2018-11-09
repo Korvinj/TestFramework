@@ -20,6 +20,7 @@ public class MainPageDefinitions extends AbstractStepDefinitions{
 	public void loginWithCredentials(String login, String password) {
 		mainPage.getMyAccountButton().click();
 		mainPage.getLoginButton().click();
+		mainPage.waitForPageLoaded();
 		mainPage.getEmailField().sendKeys(login);
 		mainPage.getPasswordField().sendKeys(password);
 		mainPage.getLoginToAccountButton().click();

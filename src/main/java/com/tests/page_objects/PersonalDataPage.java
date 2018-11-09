@@ -28,6 +28,6 @@ public class PersonalDataPage extends AbstractPage {
 	}
 
 	public WebElement getPersonalDataFieldByNumber(String fieldName, int number) {
-		return waitUntilElementAppear(By.xpath("(//input[@placeholder='" + fieldName + "])[" + number + "]"));
+		return waitUntilElementAppear(By.xpath("(//input[@placeholder='" + fieldName + "'])[" + number + "]"));
 	}
 }

@@ -1,4 +1,4 @@
-Feature: Base functionality to book a trip
+Feature: Check booking functionality
 
   Scenario: Verify that user is able book a trip for 3 persons
     Given I open main page
@@ -14,3 +14,4 @@ Feature: Base functionality to book a trip
     And I fill personal data for guest number: 2
     And I fill personal data for guest number: 3
     And I book a trip with all personal data
+    Then I check that i got invoice after registration
