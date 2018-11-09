@@ -8,7 +8,7 @@ Feature: Check booking functionality
     And I want to book a tour for: 3 Guests
     And I want to book a tour with type: Holidays
     And I search for the tours
-    And I select 1 tour from search
+    And I select 1st tour from search
     And I book a tour on the offer page
     And I fill personal data for guest number: 1
     And I fill personal data for guest number: 2

@@ -9,7 +9,7 @@ public class SearchToursResultDefinition extends AbstractStepDefinitions {
 	@Autowired
 	SearchToursResultPage searchToursResultPage;
 
-	@When("I select (\\d+) tour from search")
+	@When("I select (\\d+)(?:st|nd|rd|th) tour from search")
 	public void selectTourFromSearchByNumber(int number) {
 		searchToursResultPage.getBookTourButtonByNumber(number).click();
 		searchToursResultPage.waitForPageLoaded();
